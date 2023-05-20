@@ -1,0 +1,50 @@
+name: Testing
+run-name: Chào mừng ${{ github.actor }} 🚀
+
+on:
+
+  workflow_dispatch:
+   inputs:
+      
+      
+      os5:
+        description: 'Nhập số GB dung lượng cần thiết cho ổ đĩa Windows. Ví dụ: 500G'
+        required: true
+      os6:
+        description: 'Số M ram cần thiết. Ví dụ: 2048M'
+        required: true
+      
+    
+
+jobs:
+
+  Dang_Chay:
+
+    timeout-minutes: 9999999999999999999999999999999999999999999999
+
+    runs-on: ubuntu-latest
+
+    
+
+    steps:
+
+    - name: Đang chạy...
+
+      run: |
+
+            sleep 1
+            echo Đang cài đặt
+            sudo apt update &>/dev/null
+            sudo apt install qemu-utils qemu-system-x86 -y &>/dev/null
+            echo Đang tải file Windows...
+            wget -O windows.iso https://software-download.microsoft.com/download/sg/20348.169.210806-2348.fe_release_svc_refresh_SERVER_EVAL_x64FRE_en-us.iso &>/dev/null
+            echo Đang tạo file đĩa theo ý của bạn
+            qemu-img create -f raw windows.img ${{ github.event.inputs.os5 }}
+            sudo apt install snapd -y &>/dev/null
+            sudo snap install ngrok &>/dev/null
+            ngrok authtoken 2Dz7GxtWt0jkp0YUkbD2T6EHUCO_3N5CgHH68US3GKe3fwT2o
+            ngrok tcp 5900 &>/dev/null &
+            
+            echo Đã chạy thành công!!!!!!!
+            qemu-system-x86_64 -net nic -net user,hostfwd=tcp::3381-:3389 -m ${{ github.event.inputs.os5 }} -device usb-tablet -device usb-ehci,id=usb,bus=pci.0,addr=0x4 -cpu max,+nx -smp 2 -usbdevice tablet -k en-us -cdrom windows.iso -hda windows.img -vnc :0 -boot d
+      timeout-minutes: 99999999999999999999999999999999999999999
