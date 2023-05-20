@@ -1,4 +1,4 @@
-name: Cài đặt Windows 2022 180 ngày (có thể thay đổi kéo dài thêm sau)
+name: Cài đặt Windows Server 2022 180 ngày (có thể thay đổi kéo dài thêm sau)
 run-name: Chào mừng ${{ github.actor }} 🚀
 
 on:
