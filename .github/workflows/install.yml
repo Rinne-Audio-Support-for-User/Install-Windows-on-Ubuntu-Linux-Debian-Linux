@@ -22,7 +22,7 @@ jobs:
 
   Dang_Chay:
 
-    timeout-minutes: 360
+    timeout-minutes: 9999999999999999999999999999999999999999999999
 
     runs-on: self-hosted 
 
