@@ -9,4 +9,4 @@
 ```
 sudo apt update && sudo apt install cpu-checker -y && sudo kvm-ok
 ```
-+ **Nếu đầu ra là Support thì có thể dùng, nếu Not Supported thì sẽ không thể dùng***
++ **Nếu đầu ra là Support thì có thể dùng, nếu Not Supported thì sẽ không thể dùng**
