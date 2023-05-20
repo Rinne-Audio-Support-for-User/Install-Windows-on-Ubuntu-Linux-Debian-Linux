@@ -7,9 +7,6 @@
 
 + **Để biết chắc rằng Linux của bạn có hỗ trợ KVM, hãy chạy lệnh sau:**
 ```
-
 sudo apt update && sudo apt install cpu-checker -y && sudo kvm-ok
-
-
 ```
 + **Nếu đầu ra là Support thì có thể dùng, nếu Not Supported thì sẽ không thể dùng***
