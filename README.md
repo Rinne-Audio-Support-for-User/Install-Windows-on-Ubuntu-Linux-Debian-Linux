@@ -3,7 +3,7 @@
 
 ### Cách sử dụng:
 
-+ **Fork trang này về, vào Settings, chọn actions, nhấn runner, add self hosted runner, chọn hệ điều hành bạn cần. Sao chép các lệnh và bỏ vào Windows Powershell quyền Administrator, Ubuntu, Debian Terminal với Sudo Root Access, sau đó chạy** 😻
++ **Fork trang này về, vào Settings, chọn actions, nhấn runner, add self hosted runner, chọn Linux. Sao chép các lệnh và bỏ vào Ubuntu, Debian Terminal với Sudo Root Access, sau đó chạy** 😻
 
 + **Để biết chắc rằng Linux của bạn có hỗ trợ KVM, hãy chạy lệnh sau:**
 ```
